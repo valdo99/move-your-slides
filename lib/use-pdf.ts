@@ -38,7 +38,7 @@ export function usePdf(file: File | null) {
       const scaled = page.getViewport({ scale })
       canvas.width = scaled.width
       canvas.height = scaled.height
-      page.render({ canvasContext: canvas.getContext('2d')!, viewport: scaled })
+      page.render({ canvasContext: canvas.getContext('2d')!, viewport: scaled, canvas })
     })
   }, [currentPage, totalPages])
 
